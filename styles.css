@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #DDD0C8;
+    color: #323232;
+}
+
+header {
+    background-color: #98c1d9;
+    padding: 20px;
+    font-variant: small-caps;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #293241;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    color: #e84;
+    transition: 0.4s ease;
+}
+
+#hero {
+    background: url('bckgrnd.jpg')no-repeat center center/cover;
+    color: #98c1d9;
+    text-align: center;
+    padding: 100px 20px;
+    height: 600px;
+    font-variant: small-caps;
+    
+}
+
+section#hero h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+#hero p {
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+
+#hero button {
+    background-color: transparent;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    border-top-color: #a1caec;
+    border-left-color: transparent;
+    border-bottom: 2px solid #a1caec;
+    border-right-color: transparent;
+    border-radius: 20px;
+}
+
+button a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+button a::before {
+    text-decoration: none;
+    color: #fff;
+}
+
+button a::after {
+    text-decoration: none;
+    color: #293241;
+}
+
+#hero button:hover, button a:hover {
+    background-color: #98c1d9;
+    opacity: 0.8;
+    color: #293241;
+    font-weight: bold;
+    transform: translateY(4px);
+    transition: 0.3s ease;
+}
+
+#about {
+    border-top: 2px solid #ff6347;
+    padding: 50px 20px;
+    background-color: #98c1d9;
+    color: #293241;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about img {
+    width: 180px;
+    height:200px;
+    border-radius: 50%;
+    float: right;
+    margin-top: -95px;
+    margin-right: 100px;
+    border: 2px solid #293241;
+}
+
+#about p {
+    font-size: 1.1rem;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#Projects {
+    font-variant: small-caps;
+    padding: 50px 20px;
+    background-color: #293241;
+    text-align: center;
+    color: whitesmoke;
+}
+
+#Projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.Project-lists {
+    display: flex;
+}
+
+.Project {
+    margin-left: 5px;
+    border: 1px solid #98c1d9;
+    border-radius: 6px;
+    width: 32.9%;
+    background-color: #98c1d9;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Project h3 {
+    margin-bottom: 10px;
+}
+
+.Project p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #293241;
+}
+
+.Project a {
+    color: #ff6347;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.Project a:hover {
+    text-decoration: underline;
+}
+
+/* contact section */
+
+#Contact {
+    padding: 50px 20px;
+    background-color: #98c1d9;
+    text-align: center;
+}
+
+#Contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-variant: small-caps;
+}
+
+#Contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 5px;
+}
+
+#Contact input, #Contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 15px;
+}
+
+#Contact button {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+#Contact button:hover {
+    background-color: #293241;
+    transition: 0.4s ease;
+    transform: translateY(-3px);
+}
+
+/* footer */
+
+footer {
+    background-color: #293241;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+
+
+
+
+/* Mobile first! Let's ensure it works on small devices */
+@media (max-width: 768px) {
+    header nav ul {
+    flex-direction: column;
+    align-items: center;
+    }
+    #hero h1 {
+    font-size: 2rem;
+    }
+    
+    #hero p {
+    font-size: 1rem;
+    }
+
+    #about img {
+        flex-direction: column;
+        margin-right: 30px;
+        margin-top: 1px;
+    }
+
+    #about p, #about h2 {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .Project {
+        display: grid;
+        width: 100%;
+    }
+
+    #contact form input, #contact form textarea {
+    font-size: 1rem;
+    }
+
+    footer p {
+    font-size: 0.9rem;
+    }
+    }
+    /* For larger tablets and small desktops */
+    @media (min-width: 769px) and (max-width: 1024px) {
+    #hero h1 {
+    font-size: 2.5rem;
+    }
+
+    
+    #about p, #about h2 {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .project-list {
+    grid-template-columns: 1fr 1fr;
+    }
+    #contact form input, #contact form textarea {
+    font-size: 1.1rem;
+    }
+    }
+    /* For large desktops */
+    @media (min-width: 1025px) {
+    #hero h1 {
+    font-size: 3rem;
+    }
+    
+    .project-list {
+    grid-template-columns: repeat(3, 1fr);
+    }
+    }
