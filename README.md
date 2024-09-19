@@ -1,5 +1,5 @@
-#MY PORTFOLIO
+# MY PORTFOLIO
 
-##CONTENT
+## CONTENT
 
 * **[MY PROFILE](https://github.com/BiggWizz/wizportfolio/blob/main/index.html)**
