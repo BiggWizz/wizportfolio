@@ -15,12 +15,42 @@ header {
     background-color: #98c1d9;
     padding: 20px;
     font-variant: small-caps;
+    height: 70px;
+}
+
+header img {
+    align-items: center;
+    margin-top: -20px;
+    width: 121px;
+    height: 70px;
+    float: left;
+    color: #293241;
+}
+
+.burger-menu {
+    float: right;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.33s ease-in;
+}
+
+.burger-menu:hover {
+    transform: scale(1.07);
+}
+
+.burger-menu span {
+    background-color: #293241;
+    height: 3px;
+    margin: 4px;
+    width: 25px;
 }
 
 header nav ul {
-    display: flex;
     justify-content: center;
     list-style: none;
+    display: flex;
+    float: right;
 }
 
 header nav ul li {
@@ -35,7 +65,8 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: #e84;
-    transition: 0.4s ease;
+    transition: 0.3s ease;
+    transform: scale(1.05);
 }
 
 #hero {
@@ -90,12 +121,11 @@ button a::after {
     opacity: 0.8;
     color: #293241;
     font-weight: bold;
-    transform: translateY(4px);
+    transform: scale(1.05);
     transition: 0.3s ease;
 }
 
 #about {
-    border-top: 2px solid #ff6347;
     padding: 50px 20px;
     background-color: #98c1d9;
     color: #293241;
@@ -103,17 +133,17 @@ button a::after {
 }
 
 #about h2 {
+    font-variant: small-caps;
     font-size: 2.5rem;
     margin-bottom: 20px;
+    text-shadow: 0px 2px 2px #323232;
 }
 
 #about img {
     width: 180px;
     height:200px;
     border-radius: 50%;
-    float: right;
-    margin-top: -95px;
-    margin-right: 100px;
+    float: center;
     border: 2px solid #293241;
 }
 
@@ -143,11 +173,16 @@ button a::after {
 .Project {
     margin-left: 5px;
     border: 1px solid #98c1d9;
-    border-radius: 6px;
+    border-radius: 10px;
     width: 32.9%;
     background-color: #98c1d9;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.Project:hover {
+    transform: scale(1.05);
 }
 
 .Project h3 {
@@ -234,10 +269,47 @@ footer p {
 
 /* Mobile first! Let's ensure it works on small devices */
 @media (max-width: 768px) {
-    header nav ul {
+    header img {
+        position: absolute;
+    }
+
+   .burger-menu {
+    display: flex;
+    cursor: pointer;
+   }
+
+   header nav ul {
+    position: absolute;
+    display: none;
     flex-direction: column;
     align-items: center;
-    }
+    background-color: #a1caecf4;
+    color: #293241;
+    width: 100%;
+    float: right;
+    left: 0;
+    border-top: 2px solid #293241;
+    padding: 20px 0;
+    opacity: 0.7;
+   }
+
+   header nav ul.show {
+    display: flex;
+    margin-top: 55px;
+   }
+
+   header nav ul li {
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+   }
+
+   header nav ul li:hover {
+    background-color: #98c1d9;
+    width: 100%;
+    opacity: 1;
+   }
+
     #hero h1 {
     font-size: 2rem;
     }
@@ -246,20 +318,30 @@ footer p {
     font-size: 1rem;
     }
 
+    #about {
+        display: block;
+    }
+
     #about img {
+        display: grid;
         flex-direction: column;
         margin-right: 30px;
         margin-top: 1px;
     }
 
     #about p, #about h2 {
+        display: grid;
         flex-direction: column;
         text-align: left;
     }
 
-    .Project {
+    .Project-lists {
         display: grid;
-        width: 100%;
+    }
+
+    .Project {
+        width: auto;
+        margin-bottom: 5px;
     }
 
     #contact form input, #contact form textarea {
